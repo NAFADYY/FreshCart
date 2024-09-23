@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  @apply text-green-600 font-bold;
+}
+
+.row {
+  @apply flex flex-wrap;
+}
+footer {
+  background-color: #f8f9fa;
+}
+.product-btn {
+  transform: translateY(70px);
+  transition: 0.5s;
+}
+.product:hover .product-btn {
+  transform: translateY(0);
+}
+.slick-dots {
+  position: relative !important;
+}
+
+.loader-screen {
+  min-height: 350px;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #32ac26;
+
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+.overlay {
+  background-color: rgba(255, 255, 255, 0.24);
+}
+.top-100 {
+  top: 100%;
+}
+.bottom-100 {
+  bottom: 100%;
+}
+.max-h-select {
+  max-height: 300px;
+}
+@-webkit-keyframes sk-rotateplane {
+  0% {
+    -webkit-transform: perspective(120px);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+  }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+@layer utilities {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@keyframes rotate-color {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-color {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.animate-gradient {
+  animation: rotate-color 5s linear infinite;
+  -webkit-animation: rotate-color 5s linear infinite;
+}
