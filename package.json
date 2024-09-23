@@ -1,8 +1,9 @@
 {
-  "homepage": "https://nafadyy.github.io/Fresh-Cart/",
+  
   "name": "fresh-cart",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://nafadyy.github.io/Fresh-Cart/",
   "type": "module",
   "scripts": {
     "dev": "vite",
